@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %} TaskFlow {% endblock %}
+
+{% block content %}
+
+<form class="row" method="POST">
+    <div class="text-center col-md-6 offset-md-3 bg-light rounded p-2 border border-primary">
+        <legend class="text-primary h3">Adicione uma tarefa:</legend>
+        <input name="titulo" id="titulo" placeholder="Escreva o título" class="form-control my-3 col-md-6 offset-md-3 border border-primary"></input>
+        <textarea name="tarefa" id="tarefa" placeholder="Escreva o texto" class="form-control my-3 border border-primary"></textarea>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Adicionar tarefa</button>
+        </div>
+    </div>
+</form>
+
+<div class="row mt-4">
+    <img class="img-fluid col-12 col-md-4 offset-md-4" src="../static/images/suastasks.png">
+</div>
+
+
+<form>
+    <div class="row ">
+        <div class="form-group col-6 offset-3 col-md-2 offset-md-5 ">
+            <label for="filtro"></label>
+            <select class="form-control  border border-primary text-primary" id="filtro">
+                <option value="todos">Todos</option>
+                <option value="1">A fazer</option>
+                <option value="2">Prontos</option>
+                <option value="3">Excluídos</option>
+            </select>            
+        </div>
+    </div>
+</form>
+<ul class="list-group list-group-flush rounded" id="tarefas">
+    {% for tarefa in usuario.tarefas|reverse %} 
+        <li class="list-group-item bg-light row" data-status="{{ tarefa.status_id }}">
+            <p class="bg-white p-2 rounded text-primary text-center h4 mb-3 col-6 offset-3 col-md-4 offset-md-4">{{ tarefa.titulo }}</p>
+            <p class="bg-white p-2 rounded">{{ tarefa.texto }}</p>
+            <small class="bg-white p-2 rounded">{{ tarefa.data }}</small>
+            <br>
+            <br>
+            {% if tarefa.status_id == 1 %}
+                <small class="text-white bg-warning p-2 rounded">A fazer</small>
+            {% elif tarefa.status_id == 2 %}
+                <small class="text-white bg-success p-2 rounded">Pronto</small>
+            {% else %}
+                <small class="text-white bg-danger p-2 rounded">Excluído</small>
+            {% endif %}
+            <br>
+            <form method="post" action="/update/{{ tarefa.id }}">
+                <div class="row ml-1 mt-2">
+                    <div class="form-radio col-6 mt-1 mt-md-2 p-0">
+                        <input type="radio" id="pronto" name="status" value="pronto" {% if tarefa.status_id == 2 %}checked{% endif %}>
+                        <label for="pronto">Pronto</label>
+                        <input type="radio" id="afazer" name="status" value="afazer" {% if tarefa.status_id == 1 %}checked{% endif %}>
+                        <label for="afazer">A fazer</label>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="close" onClick="deleteTarefa({{ tarefa.id }})">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="close mr-4">
+                            <button type="submit" class="btn-sm btn-success">Atualizar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </li>
+    {% else %}
+        <li>Nenhuma tarefa cadastrada.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
