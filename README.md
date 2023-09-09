@@ -1,4 +1,4 @@
-![Logo do TaskFlow](https://github.com/GuilhermeMF19/tarefas/blob/main/tarefas/website/static/images/taskflow.png)
+![Logo do TaskFlow](images/taskflow.png)
 
 
 TaskFlow - Site de Tarefas
