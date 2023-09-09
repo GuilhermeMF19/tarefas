@@ -22,10 +22,15 @@ Antes de usar o TaskFlow, verifique se você atende aos seguintes pré-requisito
 
 
 Python 3.x
+
 Flask
+
 Flask-SQLAlchemy
+
 Flask-Migrate
+
 Bootstrap
+
 JavaScript
 
 
