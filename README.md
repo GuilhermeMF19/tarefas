@@ -20,7 +20,7 @@ Pré-requisitos:
 
 Antes de usar o TaskFlow, verifique se você atende aos seguintes pré-requisitos:
 
-<span style:"color:rgb(13, 110, 253);">
+<p style:"color:rgb(13, 110, 253);">
 Python 3.x
 <br>
 Flask
@@ -32,7 +32,7 @@ Flask-Migrate
 Bootstrap
 <br>
 JavaScript
-</span>
+</p>
 
 
 Contribuição:
