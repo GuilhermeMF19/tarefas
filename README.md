@@ -1,9 +1,7 @@
-![Logo do TaskFlow](./tarefas/website/static/images/taskflow.png)
-
-
-TaskFlow - Site de Tarefas
-
-O TaskFlow é um site de gerenciamento de tarefas criado com Flask, Bootstrap e JavaScript. Ele foi desenvolvido em um ambiente virtual para isolar as bibliotecas e não afetar a instalação padrão do Python no seu computador. As imagens, incluindo a logo, foram criadas com o Illustrator usando gráficos vetoriais.
+<div align="center">
+  <img src="./tarefas/website/static/images/taskflow.png" alt="Logo do TaskFlow">
+  <h1>TaskFlow - Site de Tarefas</h1>
+  <p>O TaskFlow é um site de gerenciamento de tarefas criado com Flask, Bootstrap e JavaScript. Ele foi desenvolvido em um ambiente virtual para isolar as bibliotecas e não afetar a instalação padrão do Python no seu computador. As imagens, incluindo a logo, foram criadas com o Illustrator usando gráficos vetoriais.
 
 
 Visão Geral:
@@ -39,4 +37,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, enviar p
 
 Licença:
 
-Este projeto está licenciado sob a Licença MIT.
+Este projeto está licenciado sob a Licença MIT.</p>
+</div>
+
