@@ -1,4 +1,4 @@
-![Logo do TaskFlow](tarefas/website/static/images/taskflow.png)
+![Logo do TaskFlow](./tarefas/website/static/images/taskflow.png)
 
 
 TaskFlow - Site de Tarefas
