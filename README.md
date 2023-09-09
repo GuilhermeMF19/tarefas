@@ -39,12 +39,5 @@ JavaScript
 
 Contribuição:
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, enviar pull requests ou discutir ideias no nosso fórum de discussão.
+Contribuições são bem-vindas! Sinta-se à vontade para entrar em contato.
 <hr>
-
-
-Licença:
-
-Este projeto está licenciado sob a Licença MIT.</p>
-</div>
-
