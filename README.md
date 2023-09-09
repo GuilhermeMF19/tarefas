@@ -16,6 +16,7 @@ Criação de Tarefas: Crie novas tarefas facilmente e atribua-as a categorias es
 Organização: Organize suas tarefas por status personalizados.
 Ambiente Virtual: O projeto é desenvolvido em um ambiente virtual para evitar conflitos com as bibliotecas Python no seu sistema.
 <br>
+<hr>
 
 Pré-requisitos:
 
